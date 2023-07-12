@@ -85,6 +85,12 @@ path="/ctfhub/upcoming/:limit?"
 
 </Route>
 
+## DBLP
+
+### 关键字搜索
+
+<Route author="ytno1" example="/dblp/knowledge%20tracing" path="/dblp/:field" :paramsDesc="['研究领域']" radar="1" />
+
 ## gradCafe
 
 ### gradCafe result
@@ -387,6 +393,22 @@ path="/ctfhub/upcoming/:limit?"
 ## 幕布精选
 
 <Route author="laampui nczitzk" example="/mubu/explore/16/读书笔记" path="/mubu/explore/:category?/:title?" :paramsDesc="['分类 id', '显示标题']" />
+
+## 山东省教育招生考试院
+
+### 新闻
+
+<Route author="nczitzk" example="/sdzk" path="/sdzk/:bcid?/:cid?" :paramsDesc="['板块 id，可在对应板块页 URL 中找到，默认为 `1`，即信息与政策', '栏目 id，可在对应板块页 URL 中找到，默认为 `16`，即通知公告']">
+
+::: tip 提示
+
+若订阅 [信息与政策](https://www.sdzk.cn/NewsList.aspx?BCID=1)，网址为 <https://www.sdzk.cn/NewsList.aspx?BCID=1>。截取 `BCID=1` 作为参数，此时路由为 [`/sdzk/1`](https://rsshub.app/sdzk/1)。
+
+若订阅 [通知公告](https://www.sdzk.cn/NewsList.aspx?BCID=1\&CID=16)，网址为 <https://www.sdzk.cn/NewsList.aspx?BCID=1&CID=16>。截取 `BCID=1` 与 `CID=16` 作为参数，此时路由为 [`/sdzk/1/16`](https://rsshub.app/sdzk/1/16)。
+
+:::
+
+</Route>
 
 ## 扇贝
 
@@ -720,6 +742,12 @@ path="/ctfhub/upcoming/:limit?"
 ### 通知公告
 
 <Route author="nczitzk" example="/cpta/notice" path="/cpta/notice" />
+
+## 中国社会科学网
+
+### 中国法学网
+
+<Route author="HankChow" example="/cssn/iolaw/zxzp" path="/cssn/iolaw/:section?" :paramsDesc="['板块 ID，可在 URL 找到。例如页面 URL 为 `http://iolaw.cssn.cn/zxzp/`，则板块 ID 为 `zxzp`。若不填该参数，默认为 `zxzp`']"/>
 
 ## 中国研究生招生信息网
 
